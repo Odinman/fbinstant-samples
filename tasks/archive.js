@@ -17,7 +17,7 @@ module.exports = function (gulp, config, commandLineArguments) {
     * on config.archivesFolder
     *
     */
-  gulp.task('archive', ['clean', 'common', 'make', 'replace-sdk'], function () {
+  gulp.task('archive', gulp.series('clean', 'common', 'make', 'replace-sdk', function () {
     const filename = commandLineArguments.zip;
 
     return gulp.src([
@@ -30,5 +30,5 @@ module.exports = function (gulp, config, commandLineArguments) {
       .on('end', function () {
         console.log('ZIP archive created');
       });
-  });
+  }));
 };

@@ -29,7 +29,7 @@ module.exports = function (gulp, config, commandLineArguments) {
     */
   gulp.task(
     'run-dist',
-    ['clean', 'common', 'make', 'replace-sdk'],
+    gulp.series('clean', 'common', 'make', 'replace-sdk',
     function () {
       const openUrl =
         'https://www.facebook.com/embed/instantgames/' +
@@ -42,5 +42,5 @@ module.exports = function (gulp, config, commandLineArguments) {
           port: 8000,
           open: openUrl
         }));
-  });
+  }));
 };

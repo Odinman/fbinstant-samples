@@ -21,7 +21,7 @@ module.exports = function (gulp, config, commandLineArguments) {
     */
   gulp.task(
     'upload',
-    ['clean', 'common', 'make', 'replace-sdk', 'archive'],
+    gulp.series('clean', 'common', 'make', 'replace-sdk', 'archive',
     function () {
       upload(config.archivesFolder, commandLineArguments.zip)
         .then(function () {
@@ -30,7 +30,7 @@ module.exports = function (gulp, config, commandLineArguments) {
         .catch(function (error) {
           console.log('Failure. ' + error);
         });
-  });
+  }));
 
   /*
     * Attempts to upload archive to the Application's web hosting

@@ -22,7 +22,7 @@ module.exports = function (gulp, config, commandLineArguments) {
     */
   gulp.task(
     'run-mock',
-    ['clean', 'common', 'make', 'replace-sdk'],
+    gulp.series('clean', 'common', 'make', 'replace-sdk',
     function () {
       gulp.src(config.outputFolder)
         .pipe(webserver({
@@ -30,5 +30,5 @@ module.exports = function (gulp, config, commandLineArguments) {
           port: 8000,
           liveReload: true
         }));
-  });
+  }));
 };

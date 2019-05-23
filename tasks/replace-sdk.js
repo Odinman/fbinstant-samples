@@ -18,7 +18,7 @@ module.exports = function (gulp, config, commandLineArguments) {
     *  configured in config.sdkPath
     */
 
-  gulp.task('replace-sdk', ['make'], function () {
+  gulp.task('replace-sdk', gulp.series('make', function () {
     var sdkPath = config.sdkPath;
     if (commandLineArguments['_'].includes('run-mock')) {
       sdkPath = config.mockSdkPath;
@@ -26,5 +26,5 @@ module.exports = function (gulp, config, commandLineArguments) {
     return gulp.src(config.outputFolder + '/index.html')
       .pipe(htmlreplace({'js': sdkPath}))
       .pipe(gulp.dest(config.outputFolder));
-  });
+  }));
 };

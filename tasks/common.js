@@ -13,8 +13,8 @@ module.exports = function (gulp, config, commandLineArguments) {
     * `gulp common`
     *  Copies the assets common to all examples into the output folder
     */
-  gulp.task('common', ['clean'], function () {
+  gulp.task('common', gulp.series('clean', function () {
     return gulp.src('common/**/*', { base: 'common' })
       .pipe(gulp.dest(config.outputFolder));
-  });
+  }));
 };
