@@ -9,6 +9,6 @@
 node_modules/
 build/
 archives/
-config.json
+#config.json
 .env
 yarn-error.log
