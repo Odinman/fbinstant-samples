@@ -4,7 +4,9 @@
   "description": "Contains multiple samples for Instant Games",
   "main": "index.html",
   "repository": "https://github.com/facebook/fbinstant-examples.git",
-  "maintainers": ["Edgar Neto <edgarneto@fb.com>"],
+  "maintainers": [
+    "Odin Lee<odinmanlee@gmail.com>"
+  ],
   "license": "Platform License",
   "private": true,
   "dependencies": {

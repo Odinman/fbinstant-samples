@@ -1,9 +1,9 @@
 {
 	"FB_appId":"905592276499731",
-	"FB_uploadAccessToken": "EAAYsfZAxiFmMBADq1c7oOhUb3QQrArK10PNPwaywHGXZCBUrrhdWAfOEtzrqWvzK41JqMXdiqFZAMvbMW65if8y1cEVh6BtFSRhtNycJyeUHwSjEDNLmVdPUir8phBGzrBFYBLAFcIVK85wsgwo6oKGnTPBdhF2ypSNNZCQcZAAZDZD",
+	"FB_uploadAccessToken": "EAAYsfZAxiFmMBAGwgLy47E0j2erQNJQweMKK4iclBAaZBSYc79euMZAneq3JBta5BRts05cJGONTIZAaFhqYvPQSiZCZBmsNtWmlSKfOb1ZCgqa6kanUpSqfUlHFQ19eUkEa7OCuZCicZBSm3xmwVvDOfRLceoyXqCM0bOgwZAwf0B2wZDZD",
 	"outputFolder": "./build",
 	"archivesFolder": "./archives",
-	"sdkPath":"https://connect.facebook.net/en_US/fbinstant.6.2.js",
+	"sdkPath":"https://connect.facebook.net/en_US/fbinstant.6.3.js",
 	"mockSdkPath": "js/mock/fbinstant.6.2.mock.js"
 
 }
